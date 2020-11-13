@@ -1,5 +1,5 @@
 ## DAA-168-Fall-2020 : Course Repository ##
-###PROJECT MEMBERS###
+## **PROJECT MEMBERS** ##
 StdID | Name
 ------------ | -------------
 **60700** | **Hafiza Hareem Shahid** 
