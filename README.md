@@ -4,6 +4,7 @@ StdID | Name
 ------------ | -------------
 **60700** | **Hafiza Hareem Shahid** 
 61249 | Yusma Rasheed
+59200 | Farheen Qaiser
 
 ## Description ##
 This repository contains assignments and project submitted to DM course offered in Fall 2020 at PafKiet.
