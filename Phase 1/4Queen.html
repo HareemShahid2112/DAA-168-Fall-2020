@@ -40,13 +40,19 @@ Plotly.newPlot('myDiv', data);
 
         function initNQ(matrix, col) {
             if (col === n) {
+document.write("-------------------------------------------------"); 
+document.write("<br>");
 document.write("Arrangement of Matrix for Solution# " + count );
 document.write("<br>");
 document.write("-------------------------------------------------");
 document.write("<br>");
                 printResult(matrix);
+                document.write("Number of ways to place 4 queens :" + count);
+                document.write("<br>");
                 count++;
+                
                 return;
+
             }
 
             for (var i = 0; i < n; i++) {
