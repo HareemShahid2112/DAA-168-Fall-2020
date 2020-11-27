@@ -1,4 +1,4 @@
-## DAA-168-Fall-2020 : Course Repository ##
+## DAA-168-Fall-2020 : PHASE-1 ##
 ## N-Queen Problem Solution by Backtracking Algorithm ##
 N Queens Problem is a famous puzzle in which n-queens are to be placed on an nxn chessboard such that no two queens are in the same row, column, or diagonal. In this algorithm, I  have implemented a 4*4 matrix to place 4 queens. 
 
