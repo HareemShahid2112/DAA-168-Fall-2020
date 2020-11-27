@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Queen</title>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+</head>
+
+<body>
+    <h1>N-Queen Problem</h1>
+	<h2>60700 - Hafiza Hareem Shahid</h2><!--This is the group leader-->
+	<h3>61249 - Yusma Rasheed</h3><!--This is the 2nd Member of the group-->
+	<h3>59200 - Farheen Qaiser</h3><!--This is the 3rd Member of the group-->
+	<h4><a href="https://github.com/HareemShahid2112/DAA-168-Fall-2020.git" target="blank">GitHub</a></h4>
+<div id="myDiv" style="width: 50; height: 50;" ></div>
+    <script>
+          var trace2 = {
+  x: [1.5,7,9,9,20],
+  y: [2,4,6,8,10],
+  type: 'scatter'
+};
+
+var data = [trace2];
+
+Plotly.newPlot('myDiv', data);
+
+        var n = 4;
+        var count =1;
+
+        _nQueen();
+
+        function _nQueen() {
+            var matrix = InitialMatrix(n);
+            initNQ(matrix, 0);
+        }
+
+        function initNQ(matrix, col) {
+            if (col === n) {
+document.write("Arrangement of Matrix for Solution# " + count );
+document.write("<br>");
+document.write("-------------------------------------------------");
+document.write("<br>");
+                printResult(matrix);
+                count++;
+                return;
+            }
+
+            for (var i = 0; i < n; i++) {
+                if (checkDirection(matrix, i, col)) {
+                    matrix[i][col] = 1;
+
+                    initNQ(matrix, col + 1);
+                    matrix[i][col] = 0;
+                }
+            }
+            return false;
+        }
+
+        function InitialMatrix(n) {
+            var matrix = [];
+            for (var i = 0; i < n; i++) {
+                matrix[i] = [];
+                for (var j = 0; j < n; j++) {
+                    matrix[i][j] = 0;
+                }
+            }
+            return matrix;
+        }
+       
+        function printResult(matrix)
+        
+        {
+                       for (var i = 0; i < n; i++) {
+                for (var j = 0; j < n; j++) {
+                    document.write(" " + matrix[i][j] + " ");
+                }
+                document.write("<br>");
+            }
+            document.write("<br>");
+
+        }
+
+        function checkDirection(matrix, row, col) {
+
+            for (var i = 0; i < col; i++) {
+                if (matrix[row][i] === 1) {
+                    return false;
+                }
+            }
+
+            for (var i = row, j = col; i >= 0 && j >= 0; i--, j--) {
+                if (matrix[i][j] === 1) {
+                    return false;
+                }
+            }
+
+            for (var i = row, j = col; j >= 0 && i < n; i++, j--) {
+                if (matrix[i][j] === 1) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+      
+
+    </script>
+   
+
+</body>
+
+</html>
