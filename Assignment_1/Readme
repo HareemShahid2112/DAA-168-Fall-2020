@@ -1,7 +1,7 @@
 
-Brute force algorithm
+## Brute force algorithm ##
 
-**Basic idea:**
+##**Basic idea:**##
  
 The basic idea of the brute force algorithm is to place the queens on all possible positions and check each time if the queens cannot capture each other. If not then it has found a solution. Because of the vast amount of possible positions (NN for a table of size N while each row has 1 queen), this algorithm is not practical even for small table sizes (like N=12).
  
