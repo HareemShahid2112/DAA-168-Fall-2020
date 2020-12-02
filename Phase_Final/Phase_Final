@@ -1,1 +1,32 @@
+/////////////******graph dynamic programming*******//////////////
+ var tracedp = {
+        type: 'bar',
+        x: xArraydp,
+        y: yArraydp,
+        marker: {
+            color: '#C8A2C8',
+            line: {
+                width: 2.2
+            }
+        }
+      };
+      
+      var DP = [ DP ];
+      
+      var layoutDP = { 
+        title: 'DYNAMIC PROGRAMMING Algorithm',
+        font: {size: 10}
+      };
+      
+      var configDP = {responsive: true}
+      
+      Plotly.newPlot('dynamicProgramming', dataDP, layoutDP, configDP );
+    
+    
+}
 
+function sol3(n){
+    var i = 0;
+    var columns=[];
+    queens(columns, i, n)
+}
