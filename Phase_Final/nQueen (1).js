@@ -34,6 +34,13 @@ function runEmAll(){
 		taSol3.value+= ""+n+", "+(end-start)*1000+"\n";
 		n = n * 2;
 		}//end for
+	
+	
+	
+	
+	
+	
+	
 
 }//end runEmAll
 
@@ -135,3 +142,40 @@ public class NQueen {
 	//Ref: http://https://www.cs.cornell.edu/~rdz/Papers/RZ-IPL92.pdf
 	//Ref: If you found any paper
 }//end sol3
+
+
+
+
+
+/////////////******graph dynamic programming*******//////////////
+ var tracedp = {
+        type: 'bar',
+        x: xArraydp,
+        y: yArraydp,
+        marker: {
+            color: '#C8A2C8',
+            line: {
+                width: 2.2
+            }
+        }
+      };
+      
+      var DP = [ DP ];
+      
+      var layoutDP = { 
+        title: 'DYNAMIC PROGRAMMING Algorithm',
+        font: {size: 10}
+      };
+      
+      var configDP = {responsive: true}
+      
+      Plotly.newPlot('dynamicProgramming', dataDP, layoutDP, configDP );
+    
+    
+}
+
+function sol3(n){
+    var i = 0;
+    var columns=[];
+    queens(columns, i, n)
+}
